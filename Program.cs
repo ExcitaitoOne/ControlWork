@@ -1,10 +1,13 @@
-﻿// Свормировать массив из строк, и сделать отбор по 3 первым символам
+﻿// Свормировать массив из строк, и сделать отбор по колличеству символов = 3
 int Long = 0;
-void FillArray(string[] massiv)
+Console.WriteLine("Ввелите строку ");
+string arg = Console.ReadLine();
+
+void FillArray(string[] massiv, string)
 {
     for (int i = 0; i < massiv.Length; i++)
-    {
-
+    {  
+        massiv[i] = arg;
     }
 
 }
@@ -21,16 +24,17 @@ void LongString(string[] massiv, int Long)
 {
     for (int i = 0; i < massiv.Length; i++)
     {
-        
         Long = massiv[i].Length;
-        Console.WriteLine($"Колличество букв {massiv[i]} = " + Long);
+        if (Long <= 3){
+        Console.WriteLine($" {massiv[i]}" );
+        }
     }
 }
 
+string[] Massiv = new string [5];
 
-
-
-string[] Massiv = new string[5] { "asd", "dddddd", "asddf", "asdq", "asdqe1" };
-
+FillArray(Massiv);
+Console.WriteLine("введенные строки ");
 PrintArray(Massiv);
 LongString(Massiv, Long);
+
