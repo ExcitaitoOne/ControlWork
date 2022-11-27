@@ -1,17 +1,5 @@
 ﻿// Свормировать массив из строк, и сделать отбор по колличеству символов = 3
 int Long = 0;
-Console.WriteLine("Ввелите строку ");
-string arg = Console.ReadLine();
-
-void FillArray(string[] massiv, string)
-{
-    for (int i = 0; i < massiv.Length; i++)
-    {  
-        massiv[i] = arg;
-    }
-
-}
-
 void PrintArray(string[] massiv)
 {
     for (int i = 0; i < massiv.Length; i++)
@@ -31,10 +19,10 @@ void LongString(string[] massiv, int Long)
     }
 }
 
-string[] Massiv = new string [5];
+string[] Massiv = new string [5] {"String", "int", "bool", "Longint", " 1" };
 
-FillArray(Massiv);
 Console.WriteLine("введенные строки ");
 PrintArray(Massiv);
+Console.WriteLine("Строки состоящие из 3 символов и менее ");
 LongString(Massiv, Long);
 
